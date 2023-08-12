@@ -1,9 +1,10 @@
+'use client';
+
 import React from 'react'
 import styles from './navbar.module.css'
 import Image from 'next/image';
 
-const onClickFunction = e => {
-
+const changeNavbar = e => {
     const activeItems = document.querySelectorAll('.' + styles.active);
     if (activeItems) {
         activeItems.forEach(element => {
@@ -13,9 +14,13 @@ const onClickFunction = e => {
     e.target.parentNode.classList.add(styles.active);
 }
 
+const onClickFunction = () => {
+    console.log('test');
+};
+
 const navItems = [
-    ['/navItems/find-svgrepo-com.svg', onClickFunction],
     ['/navItems/home-2-svgrepo-com.svg', onClickFunction],
+    ['/navItems/find-svgrepo-com.svg', onClickFunction],
     ['/navItems/add-folder-svgrepo-com.svg', onClickFunction],
     ['/navItems/edit-ui-svgrepo-com.svg', onClickFunction],
     ['/navItems/settings-svgrepo-com (1).svg', onClickFunction],
@@ -33,7 +38,7 @@ function Navbar() {
         const [url, onClick] = item;
 
         const icon = (
-            <div className={styles.icon_wrapper} onClick={onClick}>
+            <div className={styles.icon_wrapper} onClick={(e) => { changeNavbar(e); onClick(); }}>
                 <Image src={url} height={35} width={35} alt='navItem' />
                 <div></div>
             </div>

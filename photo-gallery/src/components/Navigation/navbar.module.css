@@ -1,13 +1,16 @@
 .navbar {
     position: relative;
     height: 100vh;
-    width: 50px;
+    width: var(--navbarWidth);
+
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: rgb(47, 53, 66);
-    box-shadow: 2px 2px 5px 0px black;
+
+    background-color: var(--navbarColor);
+    box-shadow: 0px 0px 5px 0px var(--navbarColor);
+    ;
 }
 
 .icon_wrapper {
@@ -20,6 +23,10 @@
     transition: left 0.5s;
 }
 
+.icon_wrapper:hover {
+    cursor: pointer;
+}
+
 .icon_wrapper img {
     z-index: 1;
     stroke: orange;
@@ -29,11 +36,11 @@
     position: absolute;
     width: 0px;
     height: 0px;
-    background-image: linear-gradient(red, darkred);
+    background-image: linear-gradient(gray, dimgray);
     border-radius: 50px;
     box-sizing: content-box;
 
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4) inset;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4) inset, 0px 0px 5px 0px var(--navbarColor);
 
     transition: width 0.5s, height 0.5s;
 }
@@ -45,5 +52,5 @@
 .active div {
     width: 55px;
     height: 55px;
-    border: 10px solid rgb(47, 53, 66);
+    border: 10px solid var(--navbarColor);
 }

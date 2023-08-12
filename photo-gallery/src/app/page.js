@@ -1,13 +1,19 @@
 "use client";
 
-import Image from 'next/image'
-import styles from './app.module.css'
-import Navbar from '@/components/Navigation/navbar';
+import styles from './homePage.module.css'
+import { styleConcat } from '@/utils';
+import InfoSection from '@/components/LandingPage/InfoSection';
 
-export default function App() {
+export default function Home() {
   return (
-    <div className={styles.app}>
-      <Navbar />
+    <div className={styles.app} >
+      <div className={styleConcat(styles.contentContainer, styles.header)}>
+
+      </div>
+
+      <div className={styleConcat(styles.contentContainer, styles.contentDisplay)}>
+        <InfoSection />
+      </div>
     </div>
   );
 }
