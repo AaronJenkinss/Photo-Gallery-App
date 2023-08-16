@@ -4,9 +4,11 @@ import React, { useEffect, useRef, useState } from 'react'
 import styles from './ImageCarousel.module.css';
 import Image from 'next/image';
 
-const INTERVAL_DURATION = 5000;
+function ImageCarousel({ width, height, intervalDuration }) {
+    const INTERVAL_DURATION = intervalDuration;
+    const WIDTH = width;
+    const HEIGHT = height;
 
-function ImageCarousel() {
     const [offset, setOffset] = useState(0);
     const intervalID = useRef(null);
 
@@ -30,7 +32,7 @@ function ImageCarousel() {
 
     const images = imageURLS.map((url, index) => {
         return (
-            <Image src={url} loader={() => url} width={500} height={290} style={{ left: offset + '%' }} alt='test image.' key={index} />
+            <Image src={url} loader={() => url} width={WIDTH} height={HEIGHT} style={{ left: offset + '%' }} alt='test image.' key={index} />
         );
     });
 
@@ -53,8 +55,8 @@ function ImageCarousel() {
     });
 
     return (
-        <div className={styles.imageCarousel}>
-            <div className={styles.container}>
+        <div className={styles.imageCarousel} style={{ width: WIDTH, height: HEIGHT }}>
+            <div className={styles.container} style={{ width: WIDTH, height: HEIGHT }}>
                 {imageScrollButtons}
             </div>
             {images}
