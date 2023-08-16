@@ -2,18 +2,12 @@
 
 import styles from './homePage.module.css'
 import { styleConcat } from '@/utils';
-import InfoSection from '@/components/LandingPage/InfoSection';
+import ImageCarousel from '@/components/ImageCarousel/ImageCarousel';
 
 export default function Home() {
   return (
-    <div className={styles.app} >
-      <div className={styleConcat(styles.contentContainer, styles.header)}>
-
-      </div>
-
-      <div className={styleConcat(styles.contentContainer, styles.contentDisplay)}>
-        <InfoSection />
-      </div>
+    <div className={styles.main_container}>
+      <ImageCarousel />
     </div>
   );
 }

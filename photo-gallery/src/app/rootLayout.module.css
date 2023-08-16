@@ -1,4 +1,0 @@
-.main_content {
-    width: calc(100vw - var(--navbarWidth));
-    height: 100vh;
-}
