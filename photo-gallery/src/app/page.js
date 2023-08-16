@@ -1,5 +1,3 @@
-"use client";
-
 import styles from './homePage.module.css'
 import { styleConcat } from '@/utils';
 import ImageCarousel from '@/components/ImageCarousel/ImageCarousel';
