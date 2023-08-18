@@ -1,8 +1,5 @@
 .imageCollection {
     position: relative;
-    background-color: orange;
-
-    transition: transform 2s;
 }
 
 .imageCollection img {
@@ -12,5 +9,5 @@
 
     border: 2px solid rgb(255, 255, 255);
 
-    transition: transform 1s, bottom 2s;
+    transition: transform 1s, bottom 1s;
 }
