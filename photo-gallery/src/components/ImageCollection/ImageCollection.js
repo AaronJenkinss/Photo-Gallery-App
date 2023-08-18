@@ -29,10 +29,12 @@ function ImageCollection({ widthAndHeight, intervalDuration, imageURLS, initialR
     const [toggleAnimation, setToggleAnimation] = useState(false);
 
     const images = IMAGE_URLS.map((url, index) => {
+        const rotation = (index === currentIndex && toggleAnimation ? 0 : imageOffsets[index].rotation);
+
         const style = {
             zIndex: imageOffsets[index].zIndex,
             bottom: (index === currentIndex && toggleAnimation ? BOTTOM_OFFSET : '0px'),
-            transform: 'rotate(' + (imageOffsets[index].rotation) + 'deg)',
+            transform: 'rotate(' + rotation + 'deg)',
             transition: 'transform ' + ROTATION_DURATION + 's, bottom ' + BOTTOM_OFFSET_DURATION + 's',
 
         };
@@ -88,8 +90,6 @@ function ImageCollection({ widthAndHeight, intervalDuration, imageURLS, initialR
         transform: 'scale(' + (toggleAnimation ? SCALE_FACTOR : 1) + ')',
         transition: 'transform ' + SCALING_DURATION + 's',
     };
-
-    console.log(containerStyles)
 
     return (
         <div className={styles.imageCollection} style={containerStyles} onMouseEnter={startAnimation} onMouseLeave={stopAnimation}>
