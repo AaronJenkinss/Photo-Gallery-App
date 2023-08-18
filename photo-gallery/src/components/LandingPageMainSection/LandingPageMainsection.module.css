@@ -1,0 +1,29 @@
+.container {
+    width: 100%;
+    height: 450px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: 1px solid darkgray;
+    background-color: rgb(var(--landingMainSectionColor), var(--landingMainSectionColor), var(--landingMainSectionColor));
+}
+
+.container section {
+    width: 500px;
+
+    margin-right: 60px;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.container h1 {
+    font-weight: 400;
+
+    margin-bottom: 25px;
+}
+
+.container p {
+    width: 450px;
+}

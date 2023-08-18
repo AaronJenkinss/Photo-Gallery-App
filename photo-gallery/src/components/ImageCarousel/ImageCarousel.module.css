@@ -10,7 +10,6 @@
     object-fit: cover;
 
     position: relative;
-    transition: left 2s;
 }
 
 .container {
