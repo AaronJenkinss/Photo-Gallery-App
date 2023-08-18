@@ -7,7 +7,7 @@ import { styleConcat } from '@/utils';
 
 function ImageCarousel({ width, height, intervalDuration, scrollDuration, imageURLS }) {
     const INTERVAL_DURATION = intervalDuration;
-    const SCROLL_DURATION = scrollDuration;
+    const SCROLL_DURATION = scrollDuration / 1000;
     const WIDTH = width;
     const HEIGHT = height;
     const IMAGE_URLS = imageURLS;
@@ -28,7 +28,7 @@ function ImageCarousel({ width, height, intervalDuration, scrollDuration, imageU
 
     const images = IMAGE_URLS.map((url, index) => {
         return (
-            <Image src={url} width={WIDTH} height={HEIGHT} style={{ left: offset + '%', transition: 'left ' + (SCROLL_DURATION / 1000) + 's' }} alt='test image.' key={index} unoptimized={true} />
+            <Image src={url} width={WIDTH} height={HEIGHT} style={{ left: offset + '%', transition: 'left ' + SCROLL_DURATION + 's' }} alt='test image.' key={index} unoptimized={true} />
         );
     });
 
