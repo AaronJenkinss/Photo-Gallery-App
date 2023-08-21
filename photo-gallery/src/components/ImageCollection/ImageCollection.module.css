@@ -1,12 +1,5 @@
 .imageCollection {
     position: relative;
-
-
-    transition: transform 2s;
-}
-
-.imageCollection:hover {
-    transform: scale(1.1);
 }
 
 .imageCollection img {

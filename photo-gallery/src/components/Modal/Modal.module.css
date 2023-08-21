@@ -1,0 +1,94 @@
+.modalContainer {
+    position: fixed;
+
+    z-index: 10;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    width: 85%;
+    height: 85%;
+
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 25px 0 rgb(50, 50, 50);
+
+    border-radius: 25px;
+
+    display: grid;
+    grid-template-columns: 1.5fr 4fr;
+    grid-template-rows: 0.1fr 1fr;
+}
+
+.componentDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 0px 0px 0px 25px;
+
+    background-color: rgb(50, 50, 50);
+
+    grid-area: 2 / 1 / 2 / 2;
+}
+
+.content {
+    grid-area: 2 / 2 / 2 / 2;
+
+    border-radius: 0px 0px 25px 0px;
+}
+
+.interactionsBar {
+    grid-area: 1 / 1 / 1 / span 2;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    background-color: darkgray;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.interactionsBar button {
+    margin-right: 10px;
+
+    background: 0;
+    border: 0;
+}
+
+.interactionsBar button:hover {
+    cursor: pointer;
+    background-color: gray;
+}
+
+.interactionsBar svg {
+    fill: rgb(0, 0, 0);
+}
+
+.content button {
+    background-color: orange;
+    padding: 10px;
+
+    border: 1px solid sandybrown;
+}
+
+.content button:hover {
+    background-color: darkorange;
+    cursor: pointer;
+}
+
+.content h1 {
+    margin-bottom: 20px;
+}
+
+.content p {
+    margin-bottom: 20px;
+}
