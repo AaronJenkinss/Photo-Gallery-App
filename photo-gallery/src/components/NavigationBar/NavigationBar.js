@@ -6,7 +6,8 @@ const NAVIGATION_ITEMS = [
     'Dashboard',
     'Features',
     'Contact',
-    'About'
+    'About',
+    'Register',
 ];
 
 function NavigationBar() {
